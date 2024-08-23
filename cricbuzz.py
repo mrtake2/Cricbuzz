@@ -1,5 +1,5 @@
 import json
-import urllib2
+import urllib
 import xml.dom.minidom
 
 
@@ -10,10 +10,10 @@ class CricbuzzParser():
 
     def getXml(self):
         # Change coding here
-        r = urllib2.Request("http://synd.cricbuzz.com/j2me/1.0/livematches.xml",
+        r = urllib.Request("http://synd.cricbuzz.com/j2me/1.0/livematches.xml",
                             headers={
                                 "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/602.4.8 (KHTML, like Gecko) Version/10.0.3 Safari/602.4.8"})
-        f = urllib2.urlopen(r)
+        f = urllib.urlopen(r)
         doc = xml.dom.minidom.parse(f)
         node = doc.documentElement
         matches = node.getElementsByTagName("match")
