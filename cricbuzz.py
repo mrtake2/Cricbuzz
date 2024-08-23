@@ -10,7 +10,7 @@ class CricbuzzParser():
 
     def getXml(self):
         # Change coding here
-        r = urllib.Request("http://synd.cricbuzz.com/j2me/1.0/livematches.xml",
+        r = urllib.request("http://synd.cricbuzz.com/j2me/1.0/livematches.xml",
                             headers={
                                 "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/602.4.8 (KHTML, like Gecko) Version/10.0.3 Safari/602.4.8"})
         f = urllib.urlopen(r)
